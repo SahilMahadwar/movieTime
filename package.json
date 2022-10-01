@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start:web": "yarn workspace web dev",
+    "storybook": "yarn workspace web storybook",
     "start:api": "yarn workspace api start:dev"
   },
   "packageManager": "yarn@3.2.1",
