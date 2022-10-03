@@ -7,7 +7,7 @@ export const generated = (args: TemplateProps) => {
 };
 
 export default {
-  title: 'Components/MediaCard',
+  title: 'Components/Templet',
   parameters: {
     layout: 'centered',
   },
