@@ -1,3 +1,5 @@
+import '@fontsource/inter/variable.css';
+import '@fontsource/playfair-display/variable.css';
 import '../src/styles/globals.css';
 
 import * as NextImage from 'next/image';
