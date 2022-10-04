@@ -7,7 +7,7 @@ export const generated = (args: TemplateProps) => {
 };
 
 export default {
-  title: 'Components/Templet',
+  title: 'Templets/component',
   parameters: {
     layout: 'centered',
   },

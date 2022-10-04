@@ -7,7 +7,7 @@ export const Template = (props: TemplateProps) => {
   const {} = props;
   return (
     <div>
-      <p className="text-2xl text-green-400">Hi i am a MediaCard</p>
+      <p className="text-2xl ">Hi i am a Component Templet</p>
     </div>
   );
 };
