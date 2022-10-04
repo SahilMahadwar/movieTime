@@ -1,8 +1,8 @@
 import { ComponentMeta } from '@storybook/react';
-import React from 'react';
+
 import { MediaCard, MediaCardProps } from './MediaCard';
 
-export const generated = (args) => {
+export const generated = (args: MediaCardProps) => {
   return <MediaCard {...args} />;
 };
 
