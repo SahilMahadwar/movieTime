@@ -2,6 +2,7 @@ import '@fontsource/inter/variable.css';
 import '@fontsource/playfair-display/variable.css';
 import '../src/styles/globals.css';
 
+import { themes } from '@storybook/theming';
 import * as NextImage from 'next/image';
 
 const OriginalNextImage = NextImage.default;
@@ -18,6 +19,9 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  darkMode: {
+    current: 'dark',
   },
   // layout: 'centered',
   previewTabs: {
