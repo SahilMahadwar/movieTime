@@ -1,5 +1,7 @@
 import type { NextPage } from 'next';
 import Backdrop from '../components/Backdrop/Backdrop';
+import { Carousel } from '../components/Carousel/Carousel';
+import { movies } from '../components/Carousel/data';
 import { MediaCard } from '../components/MediaCard/MediaCard';
 import Navbar from '../components/Navbar/Navbar';
 
@@ -15,11 +17,21 @@ const Home: NextPage = () => {
         </p>
       </div>
 
-      <div className="mx-auto mt-56 flex max-w-[1212px] flex-wrap  justify-between px-10 mb-[500px]">
-        <MediaCard posterUrl="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6M7RMK2SokM82UNTeJOAOrdQpKM.jpg" />
-        <MediaCard posterUrl="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qlrRi05x5hjoM29hz6TDLGTUSop.jpg" />
-        <MediaCard posterUrl="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg" />
-        <MediaCard posterUrl="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ivQpKSYjTqs5DpoUAEyeFZsp7mM.jpg" />
+      <div className="mx-auto mt-56 max-w-[1212px] px-10 mb-[100px] ">
+        <div className="grid  grid-cols-4  gap-10 gap-y-14">
+          {movies.results.map((movie) => (
+            <MediaCard
+              key={movie.poster_path}
+              title={movie.title}
+              releaseDate={movie.release_date}
+              posterUrl={`https://image.tmdb.org/t/p/w600_and_h900_bestv2${movie.poster_path}`}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="mx-auto mt-56 flex max-w-[1212px] mb-[200px] px-10">
+        <Carousel />
       </div>
     </>
   );

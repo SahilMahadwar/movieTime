@@ -3,16 +3,18 @@ import { motion } from 'framer-motion';
 /* eslint-disable-next-line */
 export interface MediaCardProps {
   posterUrl?: string;
+  title?: string;
+  releaseDate?: string;
 }
 
 export const MediaCard = (props: MediaCardProps) => {
-  const { posterUrl } = props;
+  const { posterUrl, title, releaseDate } = props;
 
   return (
     <motion.div
       whileTap={{ scale: 1 }}
       whileHover={{ scale: 1.04 }}
-      className=" flex w-[255px] flex-col space-y-1  cursor-pointer select-none "
+      className=" flex w-[255px] flex-col space-y-1 cursor-pointer select-none "
     >
       <motion.div className="relative h-[370px] w-[255px] overflow-hidden rounded-lg ">
         <div className="absolute top-4 left-4  rounded-lg bg-black px-2 py-1">
@@ -27,8 +29,8 @@ export const MediaCard = (props: MediaCardProps) => {
         />
       </motion.div>
       <div className="space-y-1 py-2 px-4">
-        <p className="text-lg font-semibold">How I Met Your Mother</p>
-        <p className="text-sm text-gray-400">Sep 20, 1999</p>
+        <p className="text-lg font-semibold">{title}</p>
+        <p className="text-sm text-gray-400">{releaseDate}</p>
       </div>
     </motion.div>
   );
@@ -37,6 +39,8 @@ export const MediaCard = (props: MediaCardProps) => {
 const defaultMediaCardProps = {
   posterUrl:
     'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/r7XifzvtezNt31ypvsmb6Oqxw49.jpg',
+  title: 'this is a movie title',
+  releaseDate: '2022-09-25',
 };
 
 MediaCard.defaultProps = defaultMediaCardProps;
