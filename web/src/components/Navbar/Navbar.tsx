@@ -1,5 +1,6 @@
 import Logo from '../Logo/Logo';
 
+import Link from 'next/link';
 import Avatar from '../Avatar/Avatar';
 import Backdrop from '../Backdrop/Backdrop';
 import UserDropdownMenu from '../UserDropdownMenu/UserDropdownMenu';
@@ -11,9 +12,9 @@ const Navbar = () => {
       <header className="sticky top-0 z-30 bg-gray-900 bg-opacity-50 backdrop-blur backdrop-filter  firefox:bg-opacity-90">
         <div className="mx-auto max-w-[1212px] px-10">
           <div className="flex items-center justify-between border-b border-gray-800 px-4 py-5 sm:px-6 lg:px-8 xl:px-0">
-            <a className="block" href="/">
+            <Link href="/">
               <Logo />
-            </a>
+            </Link>
             <UserDropdownMenu />
           </div>
         </div>
