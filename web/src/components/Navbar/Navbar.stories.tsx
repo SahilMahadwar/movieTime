@@ -1,7 +1,7 @@
-import Navbar from './Navbar'
+import Navbar from './Navbar';
 
-export const generated = (args) => {
-  return <Navbar {...args} />
-}
+export const generated = (args: any) => {
+  return <Navbar {...args} />;
+};
 
-export default { title: 'Components/Navbar' }
+export default { title: 'Components/Navbar' };

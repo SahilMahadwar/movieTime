@@ -1,7 +1,7 @@
-import Avatar from './Avatar'
+import Avatar, { AvatarProps } from './Avatar';
 
-export const generated = (args) => {
-  return <Avatar {...args} />
-}
+export const generated = (args: AvatarProps) => {
+  return <Avatar {...args} />;
+};
 
-export default { title: 'Components/Avatar' }
+export default { title: 'Components/Avatar' };

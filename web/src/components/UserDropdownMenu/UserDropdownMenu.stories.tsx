@@ -1,7 +1,7 @@
-import UserDropdownMenu from './UserDropdownMenu'
+import UserDropdownMenu from './UserDropdownMenu';
 
-export const generated = (args) => {
-  return <UserDropdownMenu {...args} />
-}
+export const generated = (args: any) => {
+  return <UserDropdownMenu {...args} />;
+};
 
-export default { title: 'Components/UserDropdownMenu' }
+export default { title: 'Components/UserDropdownMenu' };

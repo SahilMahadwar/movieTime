@@ -1,7 +1,7 @@
-import Backdrop from './Backdrop'
+import Backdrop, { BackDropProps } from './Backdrop';
 
-export const generated = (args) => {
-  return <Backdrop {...args} />
-}
+export const generated = (args: BackDropProps) => {
+  return <Backdrop {...args} />;
+};
 
-export default { title: 'Components/Backdrop' }
+export default { title: 'Components/Backdrop' };
